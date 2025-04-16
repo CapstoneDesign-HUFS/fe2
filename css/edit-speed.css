@@ -40,9 +40,12 @@ body {
 .title-highlight {
   color: #75cc55;
   background: linear-gradient(90deg, #75cc55, #00d3a9);
-  -webkit-background-clip: text;
+  background-clip: text;               /* 표준 속성 추가 */
+  -webkit-background-clip: text;       /* WebKit 브라우저용 */
   -webkit-text-fill-color: transparent;
+  color: transparent;                  /* 표준 적용 브라우저용 */
 }
+
 
 .speed-section {
   margin-bottom: 36px;
@@ -145,6 +148,76 @@ body {
   z-index: 1;
   opacity: 0.15;
 }
+
+/* 모달 오버레이 스타일 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 어두운 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 콘텐츠 스타일 */
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 320px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 모달 메시지 텍스트 스타일 */
+.modal-content p {
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* 모달 확인 버튼 스타일 */
+.modal-content .btn {
+  background: linear-gradient(90deg, #75cc55, #00d3a9);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* 모달 확인 버튼 호버 효과 */
+.modal-content .btn:hover {
+  background: linear-gradient(90deg, #00d3a9, #75cc55);
+}
+
+/* 모달 숨김 클래스 */
+.hidden {
+  display: none;
+}
+
+/* 페이드인 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @media screen and (max-width: 390px) {
   .speed-name {

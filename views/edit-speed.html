@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>보행속도 선택</title>
-  <link rel="stylesheet" href="../css/edit-speed.css">
+  <link rel="stylesheet" href="../css/edit-speed.css" />
 </head>
 <body>
   <div class="phone-frame">
@@ -13,7 +13,7 @@
         <h1 class="title-text">김민지 님을 위한<br><span class="title-highlight">20대 여성</span><br>평균 보행속도 추천</h1>
       </div>
       
-      <div class="speed-section">
+      <div class="speed-section min-speed">
         <h2 class="section-title">최저속도를 설정해주세요</h2>
         <div class="speed-options">
           <div class="speed-option" onclick="selectOption(this, 'min')">
@@ -31,7 +31,7 @@
         </div>
       </div>
       
-      <div class="speed-section">
+      <div class="speed-section max-speed">
         <h2 class="section-title">최고속도를 설정해주세요</h2>
         <div class="speed-options">
           <div class="speed-option" onclick="selectOption(this, 'max')">
@@ -49,8 +49,8 @@
         </div>
       </div>
       <div class="button-row">
-        <button class="btn cancle" onclick="history.back()">취소</button>
-        <button class="btn save" onclick="history.back()">저장</button>  
+        <button class="btn cancel" onclick="history.back()">취소</button>
+        <button class="btn save" id="saveBtn">저장</button>  
       </div>
     </div>
     <svg class="wave-decoration" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -58,18 +58,14 @@
     </svg>
   </div>
 
-  <script>
-    function selectOption(element, type) {
-      // Remove selected class from all options in the same group
-      const parent = element.parentElement;
-      const options = parent.querySelectorAll('.speed-option');
-      options.forEach(option => {
-        option.classList.remove('selected');
-      });
-      
-      // Add selected class to clicked option
-      element.classList.add('selected');
-    }
-  </script>
+  <!-- 경고 모달 -->
+  <div id="speedWarningModal" class="modal hidden">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+      <button id="closeModalBtn" class="btn save">확인</button>
+    </div>
+  </div>
+
+  <script src="../js/edit-speed.js"></script>
 </body>
 </html>
