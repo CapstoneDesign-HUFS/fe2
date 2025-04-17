@@ -11,16 +11,19 @@
   font-size: 36px;
   font-weight: 700;
   background: linear-gradient(90deg, #75CC55, #00d3a9);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent; /* 일부 브라우저용 */
   animation: fadeIn 1s ease-out 0.2s both;
   margin-bottom: 50px;
 }
 
+
 .profile-circle {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #6ce18e, #38c16f);
+  background: linear-gradient(314.72deg, #00E3AE 12.93%, #9BE15D 84.29%);
   border-radius: 50%;
   display: flex;
   align-items: center;
