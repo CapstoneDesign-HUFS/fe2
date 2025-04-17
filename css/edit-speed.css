@@ -98,13 +98,13 @@ body {
 .speed-value {
   font-size: 14px;
   color: #777;
+  font-weight: 400;
 }
 
 .button-row {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 30px;
 }
 
 .btn {

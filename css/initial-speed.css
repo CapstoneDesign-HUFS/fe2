@@ -55,10 +55,21 @@ body {
   margin-bottom: 16px;
 }
 
+.speed-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
 .speed-options {
   display: flex;
   justify-content: space-between;
   gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
 }
 
 .speed-option {
@@ -91,7 +102,9 @@ body {
 .speed-value {
   font-size: 14px;
   color: #777;
+  font-weight: 400;
 }
+
 
 .next-button {
   width: 100%;
@@ -155,5 +168,28 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 390px) {
+  .speed-name {
+    font-size: 14px;
+  }
+
+  .speed-value {
+    font-size: 12px;
+  }
+
+  .title-text {
+    font-size: 20px;
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .content {
+    padding-top: calc(env(safe-area-inset-top) + 30px);
+    padding-left: calc(env(safe-area-inset-left) + 24px);
+    padding-right: calc(env(safe-area-inset-right) + 24px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
+  }
 }
 
