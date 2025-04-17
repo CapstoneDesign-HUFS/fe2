@@ -123,12 +123,20 @@ body {
   background: #ffffff;
   color: #555;
   border: 1px solid #ddd;
+  border-radius: 12px;
   box-shadow: none;
+  width: 50%;
+  font-size: 18px;
 }
 
-.btn.save {
+#saveBtn{
   background: linear-gradient(90deg, #c6f264, #8de557);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: none;
   color: white;
+  width: 50%;
+  font-size: 18px;
 }
 
 .btn:hover {
