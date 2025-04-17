@@ -144,6 +144,12 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   animation: fadeIn 0.3s ease-out; /* 👈 애니메이션 추가 */
 }
+.modal-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
 
 @keyframes fadeIn {
   from {
@@ -157,13 +163,14 @@ body {
 }
 
 .btn.save {
-  margin-top: 15px;
   padding: 10px 20px;
   background: #8de557;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight:600;
 }
 
 .hidden {

@@ -154,57 +154,50 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 어두운 배경 */
   display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  width: 327.45px;
+  height: 119.2px;
+  padding: 20px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
 
-/* 모달 콘텐츠 스타일 */
-.modal-content {
-  background-color: #ffffff;
-  padding: 30px 40px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
-  width: 320px;
-  animation: fadeIn 0.3s ease-out;
-}
-
-/* 모달 메시지 텍스트 스타일 */
 .modal-content p {
-  margin-bottom: 24px;
-  font-size: 18px;
-  color: #333333;
-  line-height: 1.5;
-}
-
-/* 모달 확인 버튼 스타일 */
-.modal-content .btn {
-  background: linear-gradient(90deg, #75cc55, #00d3a9);
-  color: #ffffff;
-  font-weight: 600;
   font-size: 16px;
-  padding: 12px 24px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.btn.save {
+  padding: 10px 20px;
+  background: #8de557;
+  color: #fff;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 14px;
 }
 
-/* 모달 확인 버튼 호버 효과 */
-.modal-content .btn:hover {
-  background: linear-gradient(90deg, #00d3a9, #75cc55);
-}
-
-/* 모달 숨김 클래스 */
 .hidden {
   display: none;
 }
+
 
 /* 페이드인 애니메이션 */
 @keyframes fadeIn {
