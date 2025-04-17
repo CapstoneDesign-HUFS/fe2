@@ -24,7 +24,6 @@ body {
   overflow-y: auto;
 }
 
-
 .main-title {
   margin-top: 60px;
   margin-bottom: 50px;
@@ -39,10 +38,10 @@ body {
 
 .title-highlight {
   background: linear-gradient(90deg, #75cc55, #00d3a9);
-  background-clip: text;               /* 표준 속성 */
-  -webkit-background-clip: text;       /* 웹킷 브라우저 (크롬, 사파리 등) */
+  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;                  /* 파이어폭스 대응 (optionally) */
+  color: transparent;
 }
 
 .speed-section {
@@ -74,6 +73,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 .speed-option.selected {
@@ -82,15 +82,10 @@ body {
   box-shadow: 0 4px 12px rgba(141, 229, 87, 0.2);
 }
 
-.speed-option:active {
-  transform: translateY(2px);
-}
-
 .speed-name {
   font-size: 16px;
   font-weight: 600;
   color: #444;
-  margin-bottom: 6px;
 }
 
 .speed-value {
@@ -115,50 +110,50 @@ body {
   box-shadow: 0 4px 12px rgba(141, 229, 87, 0.3);
 }
 
-.next-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(141, 229, 87, 0.4);
-}
-
-.next-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 8px rgba(141, 229, 87, 0.3);
-}
-
-.wave-decoration {
-  position: absolute;
-  bottom: 0;
+.modal {
+  position: fixed;
+  top: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  height: 120px;
-  z-index: 1;
-  opacity: 0.15;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
 }
 
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-out; /* 👈 애니메이션 추가 */
+}
 
-@media screen and (max-width: 390px) {
-  .speed-name {
-    font-size: 14px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .speed-value {
-    font-size: 12px;
-  }
-
-  .title-text {
-    font-size: 32px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.next-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 8px rgba(141, 229, 87, 0.3);
+.btn.save {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #8de557;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
-@supports (padding-top: env(safe-area-inset-top)) {
-  .content {
-    padding-top: calc(env(safe-area-inset-top) + 30px);
-    padding-left: calc(env(safe-area-inset-left) + 24px);
-    padding-right: calc(env(safe-area-inset-right) + 24px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
-  }
+
+.hidden {
+  display: none;
 }
+

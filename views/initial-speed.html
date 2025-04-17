@@ -10,63 +10,47 @@
   <div class="phone-frame">
     <div class="content">      
       <div class="main-title">
-        <h1 class="title-text">김민지 님을 위한<br><span class="title-highlight">20대 여성</span><br>평균 보행속도 추천</h1>
+        <h1 class="title-text">
+          김민지 님을 위한<br>
+          <span class="title-highlight">20대 여성</span><br>
+          평균 보행속도 추천
+        </h1>
       </div>
       
       <div class="speed-section">
         <h2 class="section-title">최저속도를 설정해주세요</h2>
-        <div class="speed-options">
-          <div class="speed-option" onclick="selectOption(this, 'min')">
-            <div class="speed-name">걷기</div>
-            <div class="speed-value">1.23m/s</div>
-          </div>
-          <div class="speed-option" onclick="selectOption(this, 'min')">
-            <div class="speed-name">빨리걷기</div>
-            <div class="speed-value">1.45m/s</div>
-          </div>
-          <div class="speed-option" onclick="selectOption(this, 'min')">
-            <div class="speed-name">뛰기</div>
-            <div class="speed-value">1.67m/s</div>
-          </div>
+        <div class="speed-options min-speed">
+          <div class="speed-option" onclick="selectOption(this, 'min', 1.23)">걷기<br><span class="speed-value">1.23m/s</span></div>
+          <div class="speed-option" onclick="selectOption(this, 'min', 1.45)">빨리걷기<br><span class="speed-value">1.45m/s</span></div>
+          <div class="speed-option" onclick="selectOption(this, 'min', 1.67)">뛰기<br><span class="speed-value">1.67m/s</span></div>
         </div>
       </div>
       
       <div class="speed-section">
         <h2 class="section-title">최고속도를 설정해주세요</h2>
-        <div class="speed-options">
-          <div class="speed-option" onclick="selectOption(this, 'max')">
-            <div class="speed-name">걷기</div>
-            <div class="speed-value">1.23m/s</div>
-          </div>
-          <div class="speed-option" onclick="selectOption(this, 'max')">
-            <div class="speed-name">빨리걷기</div>
-            <div class="speed-value">1.45m/s</div>
-          </div>
-          <div class="speed-option" onclick="selectOption(this, 'max')">
-            <div class="speed-name">뛰기</div>
-            <div class="speed-value">1.67m/s</div>
-          </div>
+        <div class="speed-options max-speed">
+          <div class="speed-option" onclick="selectOption(this, 'max', 1.23)">걷기<br><span class="speed-value">1.23m/s</span></div>
+          <div class="speed-option" onclick="selectOption(this, 'max', 1.45)">빨리걷기<br><span class="speed-value">1.45m/s</span></div>
+          <div class="speed-option" onclick="selectOption(this, 'max', 1.67)">뛰기<br><span class="speed-value">1.67m/s</span></div>
         </div>
       </div>
-      <button class="next-button" onclick="location.href='../views/home.html'">다음으로</button>
+
+      <button class="next-button" id="nextButton">다음으로</button>
     </div>
+
+    <!-- 모달 -->
+    <div id="speedWarningModal" class="modal hidden">
+      <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button id="closeModalBtn" class="btn save">확인</button>
+      </div>
+    </div>
+
     <svg class="wave-decoration" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.75,0,116.21,29.87,181.06,54.47,229.93,74.39,280.09,70.22,321.39,56.44Z" fill="#c6f264"></path>
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0Z" fill="#c6f264"></path>
     </svg>
   </div>
 
-  <script>
-    function selectOption(element, type) {
-      // Remove selected class from all options in the same group
-      const parent = element.parentElement;
-      const options = parent.querySelectorAll('.speed-option');
-      options.forEach(option => {
-        option.classList.remove('selected');
-      });
-      
-      // Add selected class to clicked option
-      element.classList.add('selected');
-    }
-  </script>
+  <script src="../js/initial-speed.js"></script>
 </body>
 </html>
