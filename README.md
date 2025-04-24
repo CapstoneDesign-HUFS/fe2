@@ -15,6 +15,8 @@
   - [보행속도수정](https://capstonedesign-hufs.github.io/fe2/views/edit-speed.html)
   - [약관 및 개인정보처리방침](https://capstonedesign-hufs.github.io/fe2/views/terms.html)
   - [나의 리포트](https://capstonedesign-hufs.github.io/fe2/views/myreport.html)
+  - [보행속도수정2](https://capstonedesign-hufs.github.io/fe2/views/edit-speed2.html)
+  - [초기속도설정2](https://capstonedesign-hufs.github.io/fe2/views/initial-speed2.html)
 
 
 -컴포넌트
