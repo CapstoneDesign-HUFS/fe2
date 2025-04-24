@@ -24,7 +24,13 @@ document.getElementById('nextButton').addEventListener('click', function () {
     showModal('최고속도는 최저속도보다 높아야 합니다.');
     return;
   }
-  window.location.href = '../views/home.html';
+
+  // ✅ 선택된 값 저장
+  localStorage.setItem('minSpeed', minSpeed);
+  localStorage.setItem('maxSpeed', maxSpeed);
+
+  // ✅ 페이지 이동
+  window.location.href = '../views/mypage.html';
 });
 
 document.getElementById('closeModalBtn').addEventListener('click', function () {
@@ -35,3 +41,4 @@ function showModal(message) {
   document.getElementById('modalMessage').textContent = message;
   document.getElementById('speedWarningModal').classList.remove('hidden');
 }
+

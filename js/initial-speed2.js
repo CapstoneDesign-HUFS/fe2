@@ -24,6 +24,12 @@ document.getElementById('nextButton').addEventListener('click', function () {
     showModal('최고속도는 최저속도보다 높아야 합니다.');
     return;
   }
+
+  // ✅ 선택된 속도값을 localStorage에 저장
+  localStorage.setItem('minSpeed', minSpeed);
+  localStorage.setItem('maxSpeed', maxSpeed);
+
+  // ✅ 다음 페이지로 이동
   window.location.href = '../views/home.html';
 });
 
