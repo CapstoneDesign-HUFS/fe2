@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function activateTab() {
   const tabs = document.querySelectorAll('.nav-item');
   const currentPage = document.body.getAttribute('data-page');
 
@@ -19,4 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       tab.querySelector('.nav-label').style.color = '#38c16f';
     }
   });
-});
+}
+
+// 바로 실행!
+activateTab();

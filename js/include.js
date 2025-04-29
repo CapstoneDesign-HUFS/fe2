@@ -21,17 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
       .then(html => {
         target.innerHTML = html;
 
-        // 스크립트 재실행 처리
-        const scripts = target.querySelectorAll('script');
-        scripts.forEach(oldScript => {
-          const newScript = document.createElement('script');
-          if (oldScript.src) {
-            newScript.src = oldScript.src;
-          } else {
-            newScript.textContent = oldScript.textContent;
-          }
-          document.body.appendChild(newScript);
-        });
+        // ⭐ 여기 핵심: footer를 불러온 뒤 bottom-nav.js 추가!
+        if (id === 'footer') {
+          const script = document.createElement('script');
+          script.src = '../js/bottom-nav.js';
+          document.body.appendChild(script);
+        }
 
         console.log(`✅ ${file} → #${id} 로드 성공`);
       })
