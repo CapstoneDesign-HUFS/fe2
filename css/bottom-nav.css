@@ -34,7 +34,12 @@ body {
     width: 33.33%;
     height: 100%;
     cursor: pointer;
+    transition: 0.5s;
     padding-top: 8px; /* 상단 여백 추가 */
+}
+
+.nav-item:active{
+    background-color: rgba(154, 205, 50, 0.3);
 }
 
 .nav-icon {

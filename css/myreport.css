@@ -10,8 +10,10 @@
   font-size: 36px;
   font-weight: 700;
   background: linear-gradient(90deg, #75cc55, #00d3a9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text; /* ✅ 표준 속성 추가 */
+  -webkit-background-clip: text; /* ✅ 사파리/크롬 호환 */
+  -webkit-text-fill-color: transparent; /* ✅ 사파리/크롬 텍스트 투명 */
+  color: transparent; /* ✅ 파이어폭스 등 일반 브라우저용 */
   animation: fadeIn 1s ease-out 0.2s both;
   margin-bottom: 50px;
 }
