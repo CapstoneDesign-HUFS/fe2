@@ -87,6 +87,10 @@ body {
   text-align: center;
 }
 
+.speed-option:hover{
+  background-color: rgba(141, 229, 87, 0.15)
+}
+
 .speed-option.selected {
   background: rgba(141, 229, 87, 0.15);
   border: 2px solid #8de557;
