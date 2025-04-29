@@ -35,9 +35,16 @@ html, body {
   bottom: 15%;
   width: auto;
 }
+#routeModal .value{
+  white-space: nowrap;
+}
 
 #arrivalModal {
   bottom: 50%;
+}
+
+#arrivalModal .title{
+  white-space: nowrap;
 }
 
 #footer {
