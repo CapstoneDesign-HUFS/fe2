@@ -10,6 +10,7 @@
 
   - [지도 홈](https://capstonedesign-hufs.github.io/fe2/views/home.html)
   - [목적지 검색 결과](https://capstonedesign-hufs.github.fe2/views/dest-result.html)
+  - [실시간 이동속도](https://capstonedesign-hufs.github.fe2/views/velocity.html)
  
   - [마이페이지](https://capstonedesign-hufs.github.io/fe2/views/mypage.html)
   - [보행속도수정](https://capstonedesign-hufs.github.io/fe2/views/edit-speed.html)
