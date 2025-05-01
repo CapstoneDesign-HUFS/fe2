@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지도 위 신호등</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    .signal-marker {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border: 3px solid;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .green {
+      border-color: #38c16f;
+      color: #38c16f;
+    }
+
+    .red {
+      border-color: #ff4d4f;
+      color: #ff4d4f;
+    }
+
+    /* 위치 예시 (지도 좌표와 무관, 실제 지도에 연동 시 좌표기반 위치 조정 필요) */
+    .signal-1 {
+      top: 200px;
+      left: 120px;
+    }
+
+    .signal-2 {
+      top: 250px;
+      left: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- 신호등 마커 -->
+  <div class="signal-marker green signal-1">8</div>
+  <div class="signal-marker red signal-2">12</div>
+
+  <!-- 지도 API는 실제 프로젝트에 따라 삽입 (예: Tmap, Kakao, Leaflet 등) -->
+  <script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=L3RMA32ZfO5WRNvNlGBCBKuXpGjYV3dlmWlETWb0"></script>
+  <script>
+    // 예시: Tmap 지도 렌더링
+    const map = new Tmapv2.Map("map", {
+      center: new Tmapv2.LatLng(37.596065, 127.054821),
+      width: "100%",
+      height: "100%",
+      zoom: 16,
+    });
+  </script>
+</body>
+</html>

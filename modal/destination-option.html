@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>목적지 검색</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background: linear-gradient(to bottom, #f3fbe9, #e8f9db);
+      color: #333;
+    }
+
+    .header {
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header .back {
+      margin-right: 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .result-info {
+      padding: 16px;
+      color: #38c16f;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .result-info small {
+      font-size: 13px;
+      display: block;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .result-list {
+      list-style: none;
+      padding: 0 16px 40px;
+      margin: 0;
+    }
+
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #eef1e6;
+    }
+
+    .place-info {
+      flex-grow: 1;
+    }
+
+    .place-info .name {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .place-info .desc {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .go-btn {
+      background: linear-gradient(135deg, #d6ff8d 0%, #a3e956 100%);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(160, 230, 92, 0.3);
+      cursor: pointer;
+    }
+
+    .go-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="back" onclick="history.back()">←</div>
+    김밥천국
+  </div>
+
+  <div class="result-info">
+    김밥천국 <small>4개의 검색 결과</small>
+  </div>
+
+  <ul class="result-list">
+    <li class="result-item">
+      <div class="place-info">
+        <div class="name">김밥천국 회기점</div>
+        <div class="desc">690m　서울 동대문구 망우로 38</div>
+      </div>
+      <div class="go-btn">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </li>
+
+    <li class="result-item">
+      <div class="place-info">
+        <div class="name">김밥천국 경희대점</div>
+        <div class="desc">775m　서울 동대문구 경희대로3길 38</div>
+      </div>
+      <div class="go-btn">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </li>
+
+    <li class="result-item">
+      <div class="place-info">
+        <div class="name">김밥천국</div>
+        <div class="desc">1.2km　서울 동대문구 왕산로 263</div>
+      </div>
+      <div class="go-btn">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </li>
+
+    <li class="result-item">
+      <div class="place-info">
+        <div class="name">김밥천국 동부시장점</div>
+        <div class="desc">1.8km　서울 동대문구 천호로 190</div>
+      </div>
+      <div class="go-btn">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </li>
+  </ul>
+
+</body>
+</html>
