@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>초록불 잔여시간 마커 (중앙 정렬)</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f0f0f0;
+      position: relative;
+    }
+
+    .signal-time {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+      border: 3px solid #00E3AE;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25),
+                  inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Heebo', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      color: #22C55E;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="signal-time">8</div>
+</body>
+</html>
